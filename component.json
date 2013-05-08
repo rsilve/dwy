@@ -1,0 +1,10 @@
+{
+  "name": "dwy",
+  "version": "0.0.0",
+  "dependencies": {
+    "moment": "~2.0.0",
+    "bootstrap.bower": "https://github.com/rsilve/bootstrap.bower.git",
+    "angular": "~1.0.6",
+    "font-awesome": "~3.0.2"
+  }
+}

@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>Days without you</title>
+<link rel="stylesheet" href="components/font-awesome/css/font-awesome.min.css">
+<link href='http://fonts.googleapis.com/css?family=Niconne|Quicksand' rel='stylesheet' type='text/css'>
+<script src="components/angular/angular.min.js"></script>
+<script src="components/moment/min/moment.min.js"></script>
+<script src="components/moment/min/langs.min.js"></script>
+
+<script>
+moment.lang('fr');
+function DaysCtrl($scope) {
+	var leaving = moment("20121031", "YYYYMMDD");
+	var ds = moment().diff(leaving, 'days');
+	$scope.days = [];
+	for (i = 0; i< ds; i++) {
+		var m = moment(leaving).add('days', i)
+		$scope.days.push({
+			days : i,
+			date : m,
+			text : m.format("[le] dddd D MMMM YYYY [, tu es parti depuis "+i+" jours]")
+		})  	
+	}
+
+}
+</script>
+<style>
+body {
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+}
+h1 {
+	font-family: 'Niconne', cursive;
+	font-size:  64px;
+	text-align: center;
+}
+h3 {
+	font-family: 'Quicksand', sans-serif;
+	font-size:  36px;
+	text-align: center;
+}
+.days {
+	list-style-type: none;
+	margin: 0;
+	padding : 0;
+}
+.days > li {
+	display: inline-block;
+	padding: 5px;
+}
+</style>
+</head>
+<body ng-app>
+<h1>Days without you</h1>
+<ul class="days" ng-controller="DaysCtrl">
+<li ng-repeat="day in days"><i class="icon-calendar" title="{{day.text}}"></i></li>
+</ul>
+<h3>Tu me manque</h3>
+</body>
+</html>

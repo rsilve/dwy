@@ -1,0 +1,8 @@
+{
+	"name": "bootstrap.bower",
+  	"version": "2.3.1",
+  	"main": "path/to/main.css",
+	"dependencies": {
+		"jquery": "~1.9.1"
+	}
+}

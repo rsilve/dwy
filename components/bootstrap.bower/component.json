@@ -1,0 +1,9 @@
+{
+  "name": "bootstrap.bower",
+  "version": "0.0.0",
+  "commit": "02ba7529b98ecf7177766e67ef6ce3a8fcbf4c85",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rsilve/bootstrap.bower.git"
+  }
+}

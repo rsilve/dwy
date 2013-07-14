@@ -19,7 +19,7 @@ function DaysCtrl($scope) {
 		$scope.days.push({
 			days : i,
 			date : m,
-			text : m.format("[le] dddd D MMMM YYYY [, Aujourd'hui j'ai pu être avec toi]"),
+			text : m.format("[le] dddd D MMMM YYYY [, Aujourd'hui j'ai pu &ecirc;tre avec toi]"),
 			special : "red"
 		}) 
 		} else {
@@ -66,7 +66,7 @@ h3 {
 <body ng-app>
 <h1>Days without you</h1>
 <ul class="days" ng-controller="DaysCtrl">
-<li ng-repeat="day in days"><i class="icon-calendar" ng-class="special" title="{{day.text}}"></i></li>
+<li ng-repeat="day in days"><i class="icon-calendar" ng-class="{{day.special}}" title="{{day.text}}"></i></li>
 </ul>
 <h3>Tu me manque</h3>
 </body>

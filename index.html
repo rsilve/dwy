@@ -15,11 +15,19 @@ function DaysCtrl($scope) {
 	$scope.days = [];
 	for (i = 0; i< ds; i++) {
 		var m = moment(leaving).add('days', i)
+		if (m.isSame('2013-07-12', 'day') {
+		$scope.days.push({
+			days : i,
+			date : m,
+			text : m.format("[le] dddd D MMMM YYYY [, Aujourd'hui j'ai pu être avec toi]")
+		}) 
+		} else {
 		$scope.days.push({
 			days : i,
 			date : m,
 			text : m.format("[le] dddd D MMMM YYYY [, tu es parti depuis "+i+" jours]")
-		})  	
+		}) 
+		} 	
 	}
 
 }

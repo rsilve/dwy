@@ -15,7 +15,7 @@ function DaysCtrl($scope) {
 	$scope.days = [];
 	for (i = 0; i< ds; i++) {
 		var m = moment(leaving).add('days', i)
-		if (m.isSame('2013-07-12', 'day') {
+		if (m.isSame('2013-07-12', 'day')) {
 		$scope.days.push({
 			days : i,
 			date : m,
